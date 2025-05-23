@@ -9,27 +9,24 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class DemoModel implements Demo{
-    
     @ValueMapValue
-    private String text;
+    private String articletitle;
     @ValueMapValue
-    private String des;
+    private String articledesc;
     @ValueMapValue
-    private int num;
-    
-
+    private int articlenum;
     @Override
     public String getArticleTitle() {
-        return text;  
+        return articletitle;  
     }
     @Override
     public String getArticleDesc() {
-        return des;
+        return articledesc;
         
     }
     @Override
     public int getArticleNum() {
-        return num;
+        return articlenum;
         
     }
 
