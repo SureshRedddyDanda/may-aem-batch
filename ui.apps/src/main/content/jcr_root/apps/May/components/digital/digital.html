@@ -1,11 +1,19 @@
 
+<div data-sly-use.model=com.adobe.aem.may.batch.core.models.DigitalParent>
 
- <div data-sly-use.model=com.adobe.aem.may.batch.core.models.DemoModel>
+     ${model.articletitle}<br>
+     ${model.articledesc}<br>
+     ${model.articlenum}<br>
 
- ${model.ArticleTitle}<br>
- ${model.ArticleDesc}<br>
- ${model.ArticleNum}<br>
+      <br>
+    <div data-sly-list.item=${model.bookdetailswithmap}>
+        <h3>${item.bookname}</h3><br>
+        <h3>${item.booksubject}</h3><br>
+        <h3><div> ${"yyyy-MM-dd"@format=item.bookpublishdate}</div></h3>
 
+    </div>    
 
 </div>
+
+
 
