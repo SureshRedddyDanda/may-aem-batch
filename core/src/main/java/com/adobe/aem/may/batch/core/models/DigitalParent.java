@@ -1,7 +1,5 @@
 package com.adobe.aem.may.batch.core.models;
 
-
-
 import java.util.List;
 
 import org.apache.sling.api.resource.Resource;

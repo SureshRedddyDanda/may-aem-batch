@@ -11,6 +11,12 @@
         <h3>${item.booksubject}</h3><br>
         <h3><div> ${"yyyy-MM-dd"@format=item.bookpublishdate}</div></h3>
 
+        <div data-sly-list.item1=${item.bookdetailswithwriter}>
+             ${item1.writername}<br>
+             ${item1.writersubject}<br>
+             <div> ${"yyyy-MM-dd"@format=item1.writerpublishdate}</div>
+        </div>     
+
     </div>    
 
 </div>
