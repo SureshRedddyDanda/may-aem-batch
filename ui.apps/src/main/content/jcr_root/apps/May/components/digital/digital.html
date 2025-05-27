@@ -1,3 +1,8 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='clientlib-digital'}" data-sly-unwrap></meta>
+
 
 <div data-sly-use.model=com.adobe.aem.may.batch.core.models.DigitalParent>
 
@@ -5,11 +10,19 @@
      ${model.articledesc}<br>
      ${model.articlenum}<br>
 
+
+     <h2>PageName: ${model.articletitle}<br> </h2>
+     <h2>PagePath: ${model.articlePagePath}<br></h2>
+
+     <h2>UserId :${model.webContentNode} <br> </h2>
+
+
       <br>
     <div data-sly-list.item=${model.bookdetailswithmap}>
-        <h3>${item.bookname}</h3><br>
-        <h3>${item.booksubject}</h3><br>
-        <h3><div> ${"yyyy-MM-dd"@format=item.bookpublishdate}</div></h3>
+
+        <h3 class="Booktitle"> ${item.bookname}</h3><br>
+        <h3 class="Booksubject"> ${item.booksubject}</h3><br>
+        <h3 class="Bookdate"> <div> ${"yyyy-MM-dd"@format=item.bookpublishdate}</div></h3>
 
         <div data-sly-list.item1=${item.bookdetailswithwriter}>
              ${item1.writername}<br>
@@ -20,6 +33,10 @@
     </div>    
 
 </div>
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Click here</button>
 
 
 

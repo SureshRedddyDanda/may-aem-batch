@@ -1,0 +1,22 @@
+
+.Booktitle
+{
+    color:red;
+    background-color:black;
+}
+
+.Booksubject
+{
+    color:blue;
+    background-color:gray;
+    padding:30px;
+    font-size:20px;
+}
+
+.Bookdate
+{
+    color:green;
+    background-color:skyblue;
+    padding:30px;
+    font-size:20px;
+}
