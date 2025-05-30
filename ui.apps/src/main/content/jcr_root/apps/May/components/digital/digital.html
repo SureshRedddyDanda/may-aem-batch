@@ -1,7 +1,4 @@
-<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
 
-<!--/* for css+js */-->
-<meta data-sly-call="${clientLib.all @ categories='clientlib-digital'}" data-sly-unwrap></meta>
 
 
 <div data-sly-use.model=com.adobe.aem.may.batch.core.models.DigitalParent>
@@ -27,16 +24,46 @@
         <div data-sly-list.item1=${item.bookdetailswithwriter}>
              ${item1.writername}<br>
              ${item1.writersubject}<br>
-             <div> ${"yyyy-MM-dd"@format=item1.writerpublishdate}</div>
+             <div> ${"yyyy-MM-dd"@format=item1.writerpublishdate}</div><br><br>
         </div>     
 
     </div>    
 
 </div>
 
-<h2>JavaScript Alert</h2>
+       <div data-sly-test="${checkbox}">
+       <h2>Dta is coming from the Testbox</h1>
+       </div>
 
-<button onclick="myFunction()">Click here</button>
+       <div data-sly-include="raju.html"></div><br>
+
+    <div data-sly-resource="${footer @resourceType='May/components/footer'}"></div><br>
+
+    <div data-sly-set.items="${['Suresh', 'AEM' , 'Surge']}"> </div>
+
+    <ul data-sly-repeat="${items}">
+
+        <li> ${item} </li>
+    </ul>
+
+    <div data-sly-template.writer="${@para1,para2,para3,para4}"> 
+
+          <h2> ${para1} </h2>
+          <h2> ${para2} </h2>
+          <h2> ${para3} </h2>
+          <h2> ${para4} </h2>
+
+    </div>
+
+    <div data-sly-call="${writer @para1='1000', para2='900', para3='800', para4='700'}"></div>
+
+
+
+
+
+
+
+
 
 
 
