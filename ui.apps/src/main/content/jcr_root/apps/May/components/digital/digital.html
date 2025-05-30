@@ -31,13 +31,13 @@
 
 </div>
 
-       <div data-sly-test="${checkbox}">
-       <h2>Dta is coming from the Testbox</h1>
+       <div data-sly-test="${checkbox==checkbox}">
+       <h3>Data is coming from the Testbox</h3>
        </div>
 
-       <div data-sly-include="raju.html"></div><br>
+       <div data-sly-include="forms.html"></div><br>
 
-    <div data-sly-resource="${footer @resourceType='May/components/footer'}"></div><br>
+    <div data-sly-resource="${forms @resourceType='May/components/forms'}"></div><br>
 
     <div data-sly-set.items="${['Suresh', 'AEM' , 'Surge']}"> </div>
 
@@ -48,15 +48,39 @@
 
     <div data-sly-template.writer="${@para1,para2,para3,para4}"> 
 
-          <h2> ${para1} </h2>
-          <h2> ${para2} </h2>
-          <h2> ${para3} </h2>
-          <h2> ${para4} </h2>
+          <h4> ${para1} </h4>
+          <h4> ${para2} </h4>
+          <h4> ${para3} </h4>
+          <h4> ${para4} </h4>
 
     </div>
 
-    <div data-sly-call="${writer @para1='1000', para2='900', para3='800', para4='700'}"></div>
+    <div data-sly-call="${writer @
 
+    para1='1000  jhjkgjlhlGUKGlhljkhlk
+    bhbjjkhjkgjkgk ,jhjhjljjj jkhjkg.jkgk.j hkjjkgjg',
+
+    para2='900  hlihlghlhgl 909790k lkhlh',
+
+    para3='800 hhkhilhli 987jlkh jkhh',
+
+    para4='700 hlhi ihihi4ljl 44'}">
+
+    </div>
+
+    <p data-sly-text="${properties.jcr:description}">Lorem ipsum</p>
+
+    <div data-sly-unwrap> Surge </div> <br><br>
+
+    <sly>
+    OSGi components in AEM are created using Declarative Services (DS).<br>
+    These components can be registered as services, which other components can use via dependency injection
+    </sly><br><br>
+
+    <div title="Suresh Reddy" data-sly-attribute="${properties.jcr:title}">Demo</div>
+    <div title="Surge solutions" data-sly-attribute="${model.articletitle}">Surge Software Solutions</div>
+
+    <h3 data-sly-element=${titleLevel}> Surge-AEM </h3>
 
 
 
