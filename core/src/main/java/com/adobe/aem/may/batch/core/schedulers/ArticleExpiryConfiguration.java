@@ -24,13 +24,13 @@ public @interface ArticleExpiryConfiguration {
     description="excellent hotels"
     )
 
-    public boolean scheduler_enabled() default true;
+    public boolean scheduler_enabled() default false;
 
     @AttributeDefinition(    
     name="NarayanHotels",
     description="excellent hotels"
     )
 
-    public boolean scheduler_concurrent() default true;
+    public boolean scheduler_concurrent() default false;
 
 }
